@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <title>Convertie en Chiffre Romain</title>
+  </head>
+  <body>
+
+<h1>Convertie en Chiffre Romain</h1>     
+
+<p>Choisie un nombre entre 1 a 100 :</p>
+
+<div class = "from">
+    <label for="guessField">Nombre :</label>
+    <input type="text" id="guessField" class="Field">
+    <input type="submit" value="Submit" class="Submit" onclick="conversion()">
+</div>
+
+<div class="resultParas">
+    <p class="reponse"></p>
+    <p class="lastResult"></p>
+</div>
+
+
+</body>
+</html>
+
+<script>
+       
+    /*$(document).ready(function(){
+
+    $("#Submit").click(function(e){
+        e.preventDefault();
+
+    $.post(
+        'connexion.php',
+        {
+            Field : $("#Field").val(),
+        },
+
+        function(data){
+
+            if(data == 'Success'){
+
+
+                $("#resultat").html("<p>Vous avez été connecté avec succès !</p>");
+            }
+            else{
+
+
+                $("#resultat").html("<p>Erreur lors de la connexion...</p>");
+            }
+
+        },
+
+        'text'
+     );
+
+});
+
+});*/
+
+    let champ = document.querySelector('.reponse');
+    let Subit = document.querySelector('.Subit');
+    let Field = document.querySelector('.Field');
+
+    function conversion() {
+
+        let user = Number(Field.value);
+
+        if (user === 0) {
+
+            champ.textContent =  '';
+
+        }
+
+        if (user === 1) {
+
+            champ.textContent =  'I';
+
+        }
+
+        if (user === 2) {
+
+            champ.textContent =  'II';
+
+        }
+
+        if (user === 3) {
+
+            champ.textContent =  'III';
+
+        }
+
+        if (user === 4) {
+
+            champ.textContent =  'IV';
+
+        }
+
+        if (user === 5) {
+
+            champ.textContent =  'V';
+
+        }
+
+        if (user === 6) {
+
+            champ.textContent =  'VI';
+
+        }
+
+        if (user === 7) {
+
+            champ.textContent =  'VII';
+
+        }
+
+        if (user === 8) {
+
+            champ.textContent =  'VIII';
+
+        }
+
+        if (user === 9) {
+
+            champ.textContent =  'IX';
+
+        }
+
+        if (user === 10) {
+
+            champ.textContent =  'X';
+
+        }
+
+        if (user === 11) {
+
+            champ.textContent =  'XI';
+
+        }
+
+        if (user === 12) {
+
+            champ.textContent =  'XII';
+
+        }
+
+        if (user === 13) {
+
+            champ.textContent =  'XII';
+
+        }
+
+        if (user === 14) {
+
+            champ.textContent =  'XIV';
+
+        }
+
+        if (user === 15) {
+
+            champ.textContent =  'XV';
+
+        }
+
+        if (user === 16) {
+
+            champ.textContent =  'XVI';
+
+        }
+
+        if (user === 17) {
+
+            champ.textContent =  'XVII';
+
+        }
+
+        if (user === 18) {
+
+            champ.textContent =  'XVIII';
+
+        }
+
+        if (user === 19) {
+
+            champ.textContent =  'XVIV';
+
+        }
+
+        if (user === 20) {
+
+            champ.textContent =  'XX';
+
+        }
+
+        if (user === 21) {
+
+            champ.textContent =  'XXI';
+
+        }
+
+        if (user === 22) {
+
+            champ.textContent =  'XXII';
+
+        }
+
+        if (user === 23) {
+
+            champ.textContent =  'XXIII';
+
+        }
+
+        if (user === 24) {
+
+            champ.textContent =  'XXIV';
+
+        }
+
+        if (user === 25) {
+
+            champ.textContent =  'XXV';
+
+        }
+
+        if (user === 26) {
+
+            champ.textContent =  'XXVI';
+
+        }
+
+        if (user === 27) {
+
+            champ.textContent =  'XXVII';
+
+        }
+
+        if (user === 28) {
+
+            champ.textContent =  'XXVIII';
+
+        }
+
+        if (user === 29) {
+
+            champ.textContent =  'XXIX';
+
+        }
+
+        if (user === 30) {
+
+            champ.textContent =  'XXX';
+
+        }
+
+        if (user === 31) {
+
+            champ.textContent =  'XXXI';
+
+        }
+
+        if (user === 32) {
+
+            champ.textContent =  'XXXII';
+
+        }
+
+        if (user === 33) {
+
+            champ.textContent =  'XXXIII';
+
+        }
+
+        if (user === 34) {
+
+            champ.textContent =  'XXXIV';
+
+        }
+
+        if (user === 35) {
+
+            champ.textContent =  'XXXV';
+
+        }
+
+        if (user === 36) {
+
+            champ.textContent =  'XXXVI';
+
+        }
+
+        if (user === 37) {
+
+            champ.textContent =  'XXXVII';
+
+        }
+
+        if (user === 38) {
+
+            champ.textContent =  'XXXVIII';
+
+        }
+
+        if (user === 39) {
+
+            champ.textContent =  'XXXIX';
+
+        }
+
+        if (user === 40) {
+
+            champ.textContent =  'XL';
+
+        }
+
+        if (user === 41) {
+
+            champ.textContent =  'XLI';
+
+        }
+
+        if (user === 42) {
+
+            champ.textContent =  'XLII';
+
+        }
+
+        if (user === 43) {
+
+            champ.textContent =  'XLIII';
+
+        }
+
+        if (user === 44) {
+
+            champ.textContent =  'XLIV';
+
+        }
+
+        if (user === 45) {
+
+            champ.textContent =  'XLV';
+
+        }
+
+        if (user === 46) {
+
+            champ.textContent =  'XLVI';
+
+        }
+
+        if (user === 47) {
+
+            champ.textContent =  'XLVII';
+
+        }
+
+        if (user === 48) {
+
+            champ.textContent =  'XLVIII';
+
+        }
+
+        if (user === 49) {
+
+            champ.textContent =  'XLIX';
+
+        }
+
+        if (user === 50) {
+
+            champ.textContent =  'L';
+
+        }
+
+        if (user === 51) {
+
+            champ.textContent =  'LI';
+
+        }
+
+        if (user === 52) {
+
+            champ.textContent =  'LII';
+
+        }
+
+        if (user === 53) {
+
+            champ.textContent =  'LIII';
+
+        }
+
+        if (user === 54) {
+
+            champ.textContent =  'LIV';
+
+        }
+
+        if (user === 55) {
+
+            champ.textContent =  'LV';
+
+        }
+
+        if (user === 56) {
+
+            champ.textContent =  'LVI';
+
+        }
+
+        if (user === 57) {
+
+            champ.textContent =  'LVII';
+
+        }
+
+        if (user === 58) {
+
+            champ.textContent =  'LVIII';
+
+        }
+
+        if (user === 59) {
+
+            champ.textContent =  'LIX';
+
+        }
+
+        if (user === 60) {
+
+            champ.textContent =  'LX';
+
+        }
+
+        if (user === 61) {
+
+            champ.textContent =  'LXI';
+
+        }
+
+        if (user === 62) {
+
+            champ.textContent =  'LXII';
+
+        }
+
+        if (user === 63) {
+
+            champ.textContent =  'LXIII';
+
+        }
+
+        if (user === 64) {
+
+            champ.textContent =  'LXIV';
+
+        }
+
+        if (user === 65) {
+
+            champ.textContent =  'LXV';
+
+        }
+
+        if (user === 66) {
+
+            champ.textContent =  'LXVI';
+
+        }
+
+        if (user === 67) {
+
+            champ.textContent =  'LXVII';
+
+        }
+
+        if (user === 68) {
+
+            champ.textContent =  'LXVIII';
+
+        }
+
+        if (user === 69) {
+
+            champ.textContent =  'LXIX';
+
+        }
+
+        if (user === 70) {
+
+            champ.textContent =  'LXX';
+
+        }
+
+        if (user === 71) {
+
+            champ.textContent =  'LXXI';
+
+        }
+
+        if (user === 72) {
+
+            champ.textContent =  'LXXII';
+
+        }
+
+        if (user === 73) {
+
+            champ.textContent =  'LXXIII';
+
+        }
+
+        if (user === 74) {
+
+            champ.textContent =  'LXXIV';
+
+        }
+
+        if (user === 75) {
+
+            champ.textContent =  'LXXV';
+
+        }
+
+        if (user === 76) {
+
+            champ.textContent =  'LXXI';
+
+        }
+
+        if (user === 77) {
+
+            champ.textContent =  'LXXII';
+
+        }
+
+        if (user === 78) {
+
+            champ.textContent =  'LXXIII';
+
+        }
+
+        if (user === 79) {
+
+            champ.textContent =  'LXXIX';
+
+        }
+
+        if (user === 81) {
+
+            champ.textContent =  'LXXXI';
+
+        }
+
+        if (user === 82) {
+
+            champ.textContent =  'LXXXII';
+
+        }
+
+        if (user === 83) {
+
+            champ.textContent =  'LXXXIII';
+
+        }
+
+        if (user === 84) {
+
+            champ.textContent =  'LXXXIV';
+
+        }
+
+        if (user === 85) {
+
+            champ.textContent =  'LXXXV';
+
+        }
+
+        if (user === 86) {
+
+            champ.textContent =  'LXXXI';
+
+        }
+
+        if (user === 87) {
+
+            champ.textContent =  'LXXXII';
+
+        }
+
+        if (user === 88) {
+
+            champ.textContent =  'LXXXIII';
+
+        }
+
+        if (user === 89) {
+
+            champ.textContent =  'LXXXIX';
+
+        }
+
+
+        if (user === 90) {
+
+            champ.textContent =  'XC';
+
+        }
+
+        if (user === 91) {
+
+            champ.textContent =  'XCI';
+
+        }
+
+        if (user === 92) {
+
+            champ.textContent =  'XCII';
+
+        }
+
+        if (user === 93) {
+
+            champ.textContent =  'XCIII';
+
+        }
+
+        if (user === 94) {
+
+            champ.textContent =  'XCIV';
+
+        }
+
+        if (user === 95) {
+
+            champ.textContent =  'XCV';
+
+        }
+
+        if (user === 96) {
+
+            champ.textContent =  'XCVI';
+
+        }
+
+        if (user === 97) {
+
+            champ.textContent =  'XC';
+
+        }
+
+        if (user === 98) {
+
+            champ.textContent =  'XCVIII';
+
+        }
+
+        if (user === 99) {
+
+            champ.textContent =  'XCIX';
+
+        }
+
+        if (user === 100) {
+
+            champ.textContent =  'C';
+
+        }
+
+
+        Field.value = '';
+        Field.focus();
+
+    }
+    Subit.addEventListener('click',conversion);
+
+</script>
